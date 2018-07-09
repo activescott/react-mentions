@@ -18,7 +18,7 @@ export const escapeRegex = str => str.replace(/[-/\\^$*+?.()|[\]{}]/g, '\\$&')
 const markupToRegex = (markup, matchAtEnd) => {
   let markupPattern = escapeRegex(markup)
   markupPattern = markupPattern.replace(PLACEHOLDERS.display, '(.+?)')
-  markupPattern = markupPattern.replace(PLACEHOLDERS.id, '(.+?)')
+  markupPattern = markupPattern.replace(PLACEHOLDERS.id, '(\\S+)')
   markupPattern = markupPattern.replace(PLACEHOLDERS.type, '(.+?)')
   if (matchAtEnd) {
     // append a $ to match at the end of the string
