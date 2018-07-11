@@ -20,7 +20,7 @@ export var escapeRegex = function escapeRegex(str) {
 var markupToRegex = function markupToRegex(markup, matchAtEnd) {
   var markupPattern = escapeRegex(markup);
   markupPattern = markupPattern.replace(PLACEHOLDERS.display, '(.+?)');
-  markupPattern = markupPattern.replace(PLACEHOLDERS.id, '(\\S+)');
+  markupPattern = markupPattern.replace(PLACEHOLDERS.id, '(\\S+\\@\\S+\\.\\S+)'); // email simplistic match: .+\@.+\..+
   markupPattern = markupPattern.replace(PLACEHOLDERS.type, '(.+?)');
   if (matchAtEnd) {
     // append a $ to match at the end of the string
