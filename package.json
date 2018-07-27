@@ -11,7 +11,6 @@
   ],
   "scripts": {
     "build": "nwb build-react-component --no-demo",
-    "prepare": "npm run build",
     "build-demo": "nwb build-react-component",
     "clean": "nwb clean-module && nwb clean-demo",
     "format": "prettier --write --no-semi --single-quote --trailing-comma es5 \"{src,test,demo/src}/**/*.js\"",
