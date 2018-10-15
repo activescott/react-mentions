@@ -4,10 +4,12 @@
   "description": "React mentions input",
   "main": "lib/index.js",
   "module": "es/index.js",
+  "types": "types/react-mentions.d.ts",
   "files": [
     "es",
     "lib",
-    "umd"
+    "umd",
+    "types"
   ],
   "scripts": {
     "build": "nwb build-react-component --no-demo",
@@ -57,6 +59,8 @@
     "semantic-release": "^12.4.1"
   },
   "dependencies": {
+    "@types/react": "^16.4.16",
+    "@types/react-dom": "^16.0.9",
     "lodash": "^4.5.1",
     "prop-types": "^15.5.8",
     "substyle": "^6.1.1"
